@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Styling Demo</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* FLEXBOX */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+
+        .flex-box {
+            background: #0d6efd;
+            color: white;
+            padding: 20px;
+            width: 100px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* GRID */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .grid-box {
+            background: #198754;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* TRANSITION */
+        .transition-box {
+            width: 200px;
+            padding: 20px;
+            background: orange;
+            text-align: center;
+            margin: auto;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        .transition-box:hover {
+            background: red;
+            transform: scale(1.1);
+        }
+
+        /* ANIMATION */
+        .animation-box {
+            width: 100px;
+            height: 100px;
+            background: purple;
+            margin: 40px auto;
+            animation: move 3s infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(200px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>CSS Styling Implementation</h1>
+
+    <!-- FLEXBOX -->
+    <h2>Flexbox</h2>
+
+    <div class="flex-container">
+        <div class="flex-box">Box 1</div>
+        <div class="flex-box">Box 2</div>
+        <div class="flex-box">Box 3</div>
+    </div>
+
+    <!-- GRID -->
+    <h2>CSS Grid</h2>
+
+    <div class="grid-container">
+        <div class="grid-box">1</div>
+        <div class="grid-box">2</div>
+        <div class="grid-box">3</div>
+        <div class="grid-box">4</div>
+        <div class="grid-box">5</div>
+        <div class="grid-box">6</div>
+    </div>
+
+    <!-- TRANSITION -->
+    <h2>Transition Effect</h2>
+
+    <div class="transition-box">
+        Hover Me
+    </div>
+
+    <!-- ANIMATION -->
+    <h2>Animation</h2>
+
+    <div class="animation-box"></div>
+
+</body>
+</html>

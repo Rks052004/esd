@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TypeScript Basics</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+
+        <h1>TypeScript Basics</h1>
+
+        <p id="output"></p>
+
+    </div>
+
+    <script>
+
+        // TypeScript-like Variables
+        let name = "Rishit";
+        let age = 20;
+
+        // Function
+        function greet(user) {
+            return "Hello " + user;
+        }
+
+        // Display Output
+        document.getElementById("output").innerHTML =
+            greet(name) + "<br>" +
+            "Age: " + age;
+
+    </script>
+
+</body>
+</html>

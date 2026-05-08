@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+
+        header, nav, section, article, footer {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        form input {
+            margin: 5px 0;
+            padding: 8px;
+            width: 250px;
+        }
+
+        button {
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Semantic Tags -->
+    <header>
+        <h1>HTML Elements Implementation</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+
+        <!-- Form -->
+        <article>
+            <h2>Registration Form</h2>
+
+            <form>
+                <input type="text" placeholder="Enter Name"><br>
+
+                <input type="email" placeholder="Enter Email"><br>
+
+                <input type="password" placeholder="Enter Password"><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </article>
+
+        <!-- Table -->
+        <article>
+            <h2>Student Table</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                </tr>
+
+                <tr>
+                    <td>101</td>
+                    <td>Rishit</td>
+                    <td>CSE</td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>Amey</td>
+                    <td>IT</td>
+                </tr>
+            </table>
+        </article>
+
+        <!-- Media -->
+        <article>
+            <h2>Media Elements</h2>
+
+            <img src="https://via.placeholder.com/300"
+                 alt="Sample Image">
+
+            <br><br>
+
+            <audio controls>
+                <source src="sample.mp3" type="audio/mp3">
+            </audio>
+
+            <br><br>
+
+            <video width="320" controls>
+                <source src="sample.mp4" type="video/mp4">
+            </video>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>© 2026 HTML Demo Page</p>
+    </footer>
+
+</body>
+</html>

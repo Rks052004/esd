@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JSON Data Handling</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JSON Data Handling</h1>
+
+    <div class="box">
+        <p id="data"></p>
+    </div>
+
+    <script>
+
+        // JSON Object
+        let student = {
+            "id": 101,
+            "name": "Rishit",
+            "course": "CSE"
+        };
+
+        // Display JSON Data
+        document.getElementById("data").innerHTML =
+            "ID: " + student.id + "<br>" +
+            "Name: " + student.name + "<br>" +
+            "Course: " + student.course;
+
+    </script>
+
+</body>
+</html>

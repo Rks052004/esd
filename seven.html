@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AJAX GET and POST</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AJAX GET and POST Request</h1>
+
+    <button onclick="getData()">GET Request</button>
+
+    <button onclick="postData()">POST Request</button>
+
+    <div id="result"></div>
+
+    <script>
+
+        // GET Request
+        function getData() {
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+
+            xhr.onload = function () {
+
+                if (xhr.status == 200) {
+
+                    let data = JSON.parse(xhr.responseText);
+
+                    document.getElementById("result").innerHTML =
+                        "GET Data:<br>" +
+                        "Title: " + data.title;
+                }
+            };
+
+            xhr.send();
+        }
+
+        // POST Request
+        function postData() {
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
+
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            xhr.onload = function () {
+
+                if (xhr.status == 201) {
+
+                    let data = JSON.parse(xhr.responseText);
+
+                    document.getElementById("result").innerHTML =
+                        "POST Successful!<br>" +
+                        "ID: " + data.id;
+                }
+            };
+
+            let newData = JSON.stringify({
+                title: "Hello",
+                body: "AJAX POST Example"
+            });
+
+            xhr.send(newData);
+        }
+
+    </script>
+
+</body>
+</html>
